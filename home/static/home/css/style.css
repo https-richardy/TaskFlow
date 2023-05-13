@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+
+body {
+    background-color: #333333;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    color:  #aaabab;
+    transition: color 0.3s ease;
+}
+
+.login-button {
+    display: inline-block;
+    background-color: #007BFF;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #0668d1;
+}

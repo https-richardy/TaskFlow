@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'dashboard/css/delete_task.css' %}">
+    <title>Dashboard | Deletar Tarefa</title>
+</head>
+<body>
+    <form method="post">
+        <h1>Tem certeza que deseja deletar a tarefa: {{ task }}?</h1>
+        <p>esta ação <b>não tem volta...</b></p>
+        <label for="user_confirm">Confirme: </label>
+        <input type="checkbox" name="user_confirm" id="user_confirm">
+        <input type="submit"class="submit-button" value="Enviar">
+    </form>
+</body>
+</html>

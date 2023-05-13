@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'dashboard/css/create_task.css' %}">
+    <title>Dashboard | Criar tarefa</title>
+</head>
+<body>
+    <div class="container">
+        <form method="post">
+            <h1>Nova tarefa</h1>
+            <label for="title">Título:</label>
+            <input type="text" name="title" id="title" placeholder="Coloque um título elegante" required>
+            <label for="description">Descrição:</label>
+            <input type="text" name="description" id="description" placeholder="Descreva sua tarefa" required>
+
+            <label for="priority">Prioridade:</label>
+            <select name="priority" id="priority">
+                <option value="urgente">Urgente</option>
+                <option value="importante">Importante</option>
+                <option value="precisa ser feito">Precisa ser feito</option>
+            </select>
+            <input type="submit" class="submit-button" value="Enviar">
+        </form>
+    </div>
+</body>
+</html>

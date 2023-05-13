@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'login/css/style.css' %}">
+    <title>Conta criada</title>
+</head>
+<body>
+    <h1>Olá {{ user }}!</h1> 
+    <p>Sua conta foi criada, <a href="/auth">Faça login</a></p>
+</body>
+</html>

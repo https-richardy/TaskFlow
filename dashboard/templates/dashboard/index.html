@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'dashboard/css/style.css' %}">
+    <title>Dashboard de {{ user }}</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Olá {{ user }}!</h1>
+        <a href="/dashboard/create_task" class="button-blue">Nova tarefa</a>
+        {% for task in tasks %}
+        <div class="task-container">
+            <ul class="task-list">
+                <h2>{{ task.title }}</h2>
+                <input type="hidden" name="task-id" value="{{ task.id }}">
+                <li>Descrição: {{ task.description }}</li>
+                <li>Data criação: {{ task.create_date }}</li>
+                <li>Prioridade: {{ task.category }}</li>
+                <li>Status: {{ task.status }}</li>
+                <a href="{% url 'delete_task' task.id %}" class="button-red">Deletar</a>
+                <a href="{% url 'update_task' task.id %}" class="button-gray">Editar</a>
+                <a href="#" class="button-green">Concluir</a>
+            </ul>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

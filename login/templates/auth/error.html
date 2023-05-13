@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'login/css/style.css' %}">
+    <title>Erro na autenticação!</title>
+</head>
+<body>
+    <h1>Ocorreu um erro ao autenticar a conta</h1>
+    <p>Verifique seu email e/ou sua senha. Caso não tenha uma conta, <a href="/auth/signup/">crie uma aqui.</a></p>
+</body>
+</html>

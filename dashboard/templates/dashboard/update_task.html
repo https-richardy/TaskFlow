@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'dashboard/css/update_task.css' %}">
+    <title>Editar tarefa</title>
+</head>
+<body>
+    <div class="container">
+        <form method="POST" action="">
+            <h1>Editar Tarefa</h1>
+            <label for="title">Título:</label>
+            <input type="text" name="title" value="{{ task.title }}"><br>
+            <input type="hidden" name="task_id" value="{{ task.id }}">
+            <label for="description">Descrição:</label>
+            <input type="text" name="description" value="{{ task.description }}">
+            <label for="priority">Prioridade:</label>
+            <select name="priority">
+                <option value="urgente" {% if task.category == 'urgente' %}selected{% endif %}>Urgente</option>
+                <option value="importante" {% if task.category == 'importante' %}selected{% endif %}>Importante</option>
+                <option value="precisa_ser_feito" {% if task.category == 'precisa ser feito' %}selected{% endif %}>Precisa ser feito</option>
+            </select><br>
+            <input type="submit" class="submit-button" value="Atualizar">
+        </form>
+    </div>
+</body>
+</html>
